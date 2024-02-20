@@ -1,1 +1,1 @@
-rebuilt momoblogdb and tested with jest 77 passed, 77 total
+rebuilt momoblogdb and tested with jest
