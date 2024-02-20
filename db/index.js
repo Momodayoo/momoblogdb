@@ -21,4 +21,4 @@ const sequelize = new Sequelize(
 
 module.exports = {
   Sequelize: sequelize,
-};
+}; 
