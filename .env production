@@ -1,11 +1,11 @@
-DB_NAME=blogdb
+DB_NAME=momodb
 DB_USER=root
 DB_PASSWORD=pa55word
 DB_HOST=localhost
 DB_PORT=3306
 DB_SSL=true
-BASE_URL=https://iodblogapi.azurewebsites.net,
+BASE_URL=https://momodbblog.azurewebsites.net,
 PORT=3000
-CORS_ORIGIN=https://iodblog.azurewebsites.net
+CORS_ORIGIN=https://momodbblog.azurewebsites.net
 UPLOADS_DIR=uploads
 JWT_KEY=secret

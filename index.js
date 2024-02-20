@@ -58,5 +58,5 @@ app.use(handleAllOtherErrors);
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-  Logger.debug(`IOD Blog Api listening on port ${port}!`);
+  Logger.debug(`momoblogdb Api listening on port ${port}!`);
 });

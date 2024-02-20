@@ -14,9 +14,9 @@ describe("User Routes", () => {
       getUsersMock.mockResolvedValueOnce([
         {
           id: 1,
-          name: "John Doe",
+          name: "Mo Moe",
           password: "password",
-          email: "john@dudes.com",
+          email: "momo@peachy.com",
         },
       ]);
 
@@ -24,7 +24,7 @@ describe("User Routes", () => {
 
       expect(res.statusCode).toEqual(200);
       expect(res.body.data.length).toEqual(1);
-      expect(res.body.data[0].name).toEqual("John Doe");
+      expect(res.body.data[0].name).toEqual("Mo Moe");
 
       getUsersMock.mockRestore();
     });
@@ -35,16 +35,16 @@ describe("User Routes", () => {
       const getUserMock = jest.spyOn(userController, "getUser");
       getUserMock.mockResolvedValueOnce({
         id: 1,
-        name: "John Doe",
+        name: "Mo Moe",
         password: "password",
-        email: "john@dudes.com",
+        email: "momo@peachy.com",
       });
 
       const res = await request(app).get("/api/users/1");
 
       expect(res.statusCode).toEqual(200);
       expect(res.body.data.id).toEqual(1);
-      expect(res.body.data.name).toEqual("John Doe");
+      expect(res.body.data.name).toEqual("Mo Moe");
 
       getUserMock.mockRestore();
     });
@@ -72,22 +72,22 @@ describe("User Routes", () => {
       const createUserMock = jest.spyOn(userController, "createUser");
       createUserMock.mockResolvedValueOnce({
         id: 1,
-        name: "John Doe",
+        name: "Mo Moe",
         password: "password",
-        email: "john@create.com",
+        email: "momo@peachy.com",
       });
 
       const res = await request(app)
         .post("/api/users")
         .send({
-          name: "John Doe",
-          email: "john@dudes.com",
+          name: "Mo Moe",
+          email: "momo@peachy.com",
           password: "password",
         });
 
       expect(res.statusCode).toEqual(200);
       expect(res.body.data.id).toEqual(1);
-      expect(res.body.data.name).toEqual("John Doe");
+      expect(res.body.data.name).toEqual("Mo Moe");
 
       createUserMock.mockRestore();
     });
@@ -96,7 +96,7 @@ describe("User Routes", () => {
       const res = await request(app)
         .post("/api/users")
         .send({
-          name: "John Doe",
+          name: "Mo Moe",
           email: "",
           password: "password",
         });
@@ -108,7 +108,7 @@ describe("User Routes", () => {
       const res = await request(app)
         .post("/api/users")
         .send({
-          name: "John Doe",
+          name: "Mo Moe",
           email: "",
           password: "password",
         });
@@ -120,7 +120,7 @@ describe("User Routes", () => {
       const res = await request(app)
         .post("/api/users")
         .send({
-          name: "John Doe",
+          name: "Mo Moe",
           email: faker.internet.email(),
           password: "",
         });
@@ -132,7 +132,7 @@ describe("User Routes", () => {
       const res = await request(app)
         .post("/api/users")
         .send({
-          name: "John Doe",
+          name: "Mo Moe",
           email: faker.internet.email(),
           password: "short",
         });
@@ -144,7 +144,7 @@ describe("User Routes", () => {
       const res = await request(app)
         .post("/api/users")
         .send({
-          name: "John Doe",
+          name: "Mo Moe",
           email: faker.internet.email(),
           password: "thispasswordistoolongvjjsfergkjrngjrngkjdfngkjfngkjrngkjerngkjngjngjngjkngjkngkjngkjfngjkngjngkjngkjfdn",
         });
@@ -174,7 +174,7 @@ describe("User Routes", () => {
         .put("/api/users/1")
         .send({
           name: "Updated Name",
-          email: "john@dudes.com",
+          email: "momo@peachy.com",
           password: "updated_password",
         });
 
@@ -193,7 +193,7 @@ describe("User Routes", () => {
         .put("/api/users/999")
         .send({
           name: "Updated Name",
-          email: "updated_email@dudes.com",
+          email: "updated_email@peachy.com",
           password: "updated_password",
         });
 

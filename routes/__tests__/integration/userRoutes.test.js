@@ -89,7 +89,7 @@ describe("PUT /api/users/:id", () => {
     const id = 999; // Replace with a non-existent user ID
     const updatedUser = {
       name: "Updated Name",
-      email: "updated_email@dudes.com",
+      email: "updated_email@peachy.com",
       password: "updated_password",
     };
     const res = await request(app).put(`/api/users/${id}`).send(updatedUser);

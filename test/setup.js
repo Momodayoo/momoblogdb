@@ -60,5 +60,5 @@ module.exports = async function (globalConfig, projectConfig) {
   const testDb = db;
 
   // Set reference to db in order to close the server during teardown.
-  globalThis.__Blogdb__ = testDb;
+  globalThis.__momodb__ = testDb;
 };

@@ -16,7 +16,7 @@ jest.mock("../../../models/user", () => {
   });
 });
 
-test("blabla", async () => {
+test("username", async () => {
   const r = await User.findOne({ where: { id: 1 } });
   expect(r).toEqual(
     expect.objectContaining({

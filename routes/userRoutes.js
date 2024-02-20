@@ -101,10 +101,10 @@ router.get("/:id", idParamValidator, async (req, res, next) => {
  *        properties:
  *         name:
  *          type: string
- *          example: John Doe
+ *          example: Mo Moe
  *         email:
  *          type: string
- *          example: john@dudes.com
+ *          example: momo@peachy.com
  *         password:
  *          type: string
  *          example: password
@@ -169,7 +169,7 @@ router.post(
  *        properties:
  *         email:
  *          type: string
- *          example: john@dudes.com
+ *          example: momo@peachy.com
  *         password:
  *          type: string
  *          example: password
@@ -223,10 +223,10 @@ router.post("/login", async (req, res, next) => {
  *        properties:
  *         name:
  *          type: string
- *          example: John Doe
+ *          example: Mo Moe
  *         email:
  *          type: string
- *          example: john@dudes.com
+ *          example: momo@peachy.com
  *         password:
  *          type: string
  *          example: password
